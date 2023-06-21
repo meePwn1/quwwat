@@ -1,0 +1,121 @@
+//====================================================================================================
+.about {
+	// .about__container
+	&__container {
+	}
+	// .about__title
+	&__title {
+		margin-bottom: 30px;
+	}
+	// .about__text
+	&__text {
+		max-width: 575px;
+		font-size: 18px;
+		line-height: 140%;
+		margin-bottom: 40px;
+	}
+	// .about__gallery
+	&__gallery {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		gap: 25px;
+		@media (max-width: $tablet) {
+			grid-template-columns: repeat(2, 1fr);
+		}
+		@media (max-width: $mobile) {
+			grid-template-columns: repeat(1, 1fr);
+		}
+	}
+	// .about__gallery-item
+	&__gallery-item {
+		img {
+			width: 100%;
+			height: 100%;
+		}
+		// .about__gallery-item_big
+		&_big {
+			grid-column: span 3;
+			@media (max-width: $tablet) {
+				grid-column: span 2;
+			}
+			@media (max-width: $mobile) {
+				grid-column: span 1;
+			}
+		}
+		// .about__gallery-item_text
+		&_text {
+			background-color: $purpleColor;
+			padding: 30px 25px;
+			color: #fff;
+		}
+	}
+	// .about__gallery-label
+	&__gallery-label {
+		font-size: 32px;
+		margin-bottom: 27px;
+		span {
+			font-size: 80px;
+			display: block;
+			font-weight: 700;
+			@media (max-width: $mobile) {
+				font-size: 60px;
+			}
+		}
+	}
+	// .about__gallery-text
+	&__gallery-text {
+		font-size: 18px;
+		line-height: 140%;
+	}
+}
+//========================================================================================================================================================
+.reviews-page {
+	background-color: #f7f6f9;
+	// .reviews-page__container
+	&__container {
+	}
+	// .reviews-page__title
+	&__title {
+		margin-bottom: 60px;
+	}
+	// .reviews-page__comments
+	&__comments {
+	}
+}
+
+.comments {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	row-gap: 50px;
+	column-gap: 100px;
+	@media (max-width: $mobile) {
+		grid-template-columns: 1fr;
+	}
+	// .comments__item
+	&__item {
+	}
+	// .comments__name
+	&__name {
+		font-size: 22px;
+		font-weight: 700;
+		margin-bottom: 5px;
+	}
+	// .comments__label
+	&__label {
+		color: rgba($color: #262625, $alpha: 0.6);
+		font-size: 16px;
+		line-height: 140%;
+		margin-bottom: 20px;
+	}
+	// .comments__text
+	&__text {
+		font-size: 16px;
+		line-height: 140%;
+		margin-bottom: 20px;
+	}
+	// .comments__date
+	&__date {
+		font-size: 16px;
+		color: rgba($color: #262625, $alpha: 0.4);
+	}
+}

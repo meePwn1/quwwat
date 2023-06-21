@@ -1,0 +1,57 @@
+//====================================================================================================
+.catalog {
+	background-color: #f7f6f9;
+	// .catalog__container
+	&__container {
+	}
+	// .catalog__conditions
+	&__conditions {
+	}
+}
+.conditions {
+	// .conditions__title
+	&__title {
+		text-align: center;
+		margin-bottom: 50px;
+		@media (max-width: $mobileSmall) {
+			margin-bottom: 30px;
+		}
+	}
+	// .conditions__list
+	&__list {
+		max-width: 675px;
+		margin: 0 auto;
+		@extend %listCounter;
+	}
+	// .conditions__item
+	&__item {
+		display: flex;
+		align-items: center;
+		gap: 20px;
+		&::before {
+			color: #ffffff;
+			font-weight: 500;
+			font-size: 26px;
+			background-color: $purpleColor;
+			border-radius: 50%;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			flex: 0 0 50px;
+			height: 50px;
+		}
+		&:not(:last-child) {
+			margin-bottom: 25px;
+		}
+		@media (max-width: $mobileSmall) {
+			gap: 15px;
+			&::before {
+				flex: 0 0 40px;
+				height: 40px;
+			}
+		}
+	}
+	// .conditions__text
+	&__text {
+	}
+}
